@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Page background */
+.page {
+  min-height: 100vh;
+  background: #eaf2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  width: 380px;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Circular Image Logo (Signup/Login) */
+.logo {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3b6cff;
+  background: #ffffff;
+}
+
+/* Verification Icon */
+.icon {
+  font-size: 42px;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #3b6cff;
+  background: #ffffff;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #1f3c88;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+/* Subtitle (Bold) */
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+/* Demo text (Normal) */
+.demo-text {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #3b6cff;
+}
+
+/* Verification Code Input */
+.code-input {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+/* Remember / Forgot row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* Remember me inline fix */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.remember input {
+  width: auto;
+  margin: 0;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #3b6cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2f57d9;
+}
+
+/* Links */
+.link {
+  color: #3b6cff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Switch text */
+.switch {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
