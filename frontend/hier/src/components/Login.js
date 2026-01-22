@@ -46,9 +46,13 @@ function Login({ setPage }) {
           </span>
         </div>
 
-        <button type="button" className="btn">
-          Log in
-        </button>
+       <button
+  className="btn"
+  onClick={() => setPage("dashboard")}
+>
+  Log in
+</button>
+
       </form>
 
       <p className="switch">

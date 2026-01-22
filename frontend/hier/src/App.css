@@ -59,17 +59,17 @@ h2 {
   margin-bottom: 4px;
 }
 
-/* Subtitle (Bold) */
+/* Subtitle */
 .subtitle {
   text-align: center;
   font-size: 14px;
   color: #666;
   margin-top: 0;
   margin-bottom: 4px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-/* Demo text (Normal) */
+/* Demo text */
 .demo-text {
   text-align: center;
   font-size: 13px;
@@ -84,6 +84,7 @@ label {
   color: #333;
   display: block;
   margin-bottom: 4px;
+  font-weight: 500;
 }
 
 /* Inputs */
@@ -117,7 +118,7 @@ input:focus {
   margin-bottom: 15px;
 }
 
-/* Remember me inline fix */
+/* Remember checkbox */
 .remember {
   display: flex;
   align-items: center;
@@ -154,9 +155,26 @@ input:focus {
   font-weight: 500;
 }
 
-/* Switch text */
+/* 🔥 BOTTOM SWITCH — PERFECT CENTER SINGLE LINE */
 .switch {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  font-size: 14px;
-  margin-top: 15px;
+}
+
+/* force inline behavior */
+.switch span {
+  display: inline-block;
+}
+
+/* spacing before link */
+.switch .link {
+  margin-left: 4px;
 }
