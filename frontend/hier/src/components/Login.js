@@ -1,8 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Login({ setPage }) {
+
+function Login() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // frontend-only navigation
+    navigate("/dashboard");
+  };
 
   return (
     <div className="card">
@@ -16,8 +27,9 @@ function Login({ setPage }) {
       <h2>Welcome Back</h2>
       <p className="subtitle">Login in to your Hier-a-Helper account</p>
       <br />
+
       {/* Form */}
-      <form autoComplete="off">
+      <form autoComplete="off" onSubmit={handleLogin}>
         <label><b>Email Address</b></label>
         <input
           type="email"
@@ -25,6 +37,7 @@ function Login({ setPage }) {
           value={email}
           autoComplete="off"
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <label><b>Password</b></label>
@@ -34,6 +47,7 @@ function Login({ setPage }) {
           value={password}
           autoComplete="new-password"
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
 
         <div className="row">
@@ -41,23 +55,26 @@ function Login({ setPage }) {
             <input type="checkbox" /> Remember me
           </label>
 
-          <span className="link" onClick={() => setPage("forgot")}>
+          {/* ✅ FIX */}
+          <span
+            className="link"
+            onClick={() => navigate("/forgot")}
+          >
             Forgot your password?
           </span>
         </div>
 
-       <button
-  className="btn"
-  onClick={() => setPage("dashboard")}
->
-  Log in
-</button>
-
+        <button type="submit" className="btn">
+          Log in
+        </button>
       </form>
 
       <p className="switch">
         Don’t have an account?
-        <span className="link" onClick={() => setPage("signup")}>
+        <span
+          className="link"
+          onClick={() => navigate("/signup")}
+        >
           {" "}Sign up
         </span>
       </p>

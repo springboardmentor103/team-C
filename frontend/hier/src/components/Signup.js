@@ -1,14 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function Signup({ setPage }) {
+function Signup() {
+  const navigate = useNavigate();
 
   const handleSignup = (e) => {
     e.preventDefault();
 
-    // 👉 Later you can add API call here
+    // 👉 Later add API call here
 
     // After signup → go to verify email page
-    setPage("verify");
+    navigate("/verify");
   };
 
   return (
@@ -21,13 +23,11 @@ function Signup({ setPage }) {
       />
 
       <h2>Create Account</h2>
-      <p className="subtitle">Join Hier-a-Helper community</p>
+      <p className="subtitle">Join Hire-a-Helper community</p>
 
       <br />
 
-      {/* Disable browser autofill */}
       <form onSubmit={handleSignup} autoComplete="off">
-
         <div className="two-inputs">
           <div className="input-group">
             <label><b>First Name</b></label>
@@ -82,7 +82,7 @@ function Signup({ setPage }) {
         Already have an account?
         <span
           className="link"
-          onClick={() => setPage("login")}
+          onClick={() => navigate("/login")}
         >
           {" "}Sign in
         </span>
